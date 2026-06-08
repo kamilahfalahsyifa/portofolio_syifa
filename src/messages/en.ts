@@ -1,0 +1,57 @@
+export default {
+  nav: {
+    home: "Home",
+    projects: "Projects",
+    about: "About",
+    experience: "Experience",
+    contact: "Contact",
+  },
+  hero: {
+    role: "Mobile & Web Developer",
+    headline: "Building digital experiences that matter.",
+    subheadline: "I create mobile and web applications with a focus on usability, performance, and elegant design.",
+    cta: "View Projects",
+  },
+  projects: {
+    title: "Featured Projects",
+    viewDetails: "View Details",
+  },
+  about: {
+    title: "About",
+    description: "I am an Informatics student passionate about Flutter, Laravel, Java, and software development. I enjoy creating applications that solve real problems and provide meaningful experiences to users. With a strong foundation in mobile and web development, I strive to build software that is not only functional but also delightful to use.",
+    skillsTitle: "Skills & Technologies",
+  },
+  experience: {
+    title: "Experience",
+  },
+  contact: {
+    title: "Let's work together.",
+    subtitle: "Get in touch and let's create something amazing.",
+    email: "Email",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+  },
+  projectDetail: {
+    backToProjects: "Back to Projects",
+    role: "Role",
+    year: "Year",
+    techStack: "Tech Stack",
+    problemTitle: "Problem",
+    background: "Background",
+    challenges: "Challenges",
+    objectives: "Objectives",
+    discussionTitle: "Discussion",
+    requirements: "Requirements",
+    architecture: "Architecture",
+    technologyStack: "Technology Stack",
+    developmentProcess: "Development Process",
+    screenshots: "Screenshots",
+    resultTitle: "Result",
+    outcome: "Outcome",
+    featuresDelivered: "Features Delivered",
+    lessonsLearned: "Lessons Learned",
+  },
+  footer: {
+    rights: "All rights reserved.",
+  },
+};

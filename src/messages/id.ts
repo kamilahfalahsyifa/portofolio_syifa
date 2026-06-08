@@ -1,0 +1,57 @@
+export default {
+  nav: {
+    home: "Beranda",
+    projects: "Proyek",
+    about: "Tentang",
+    experience: "Pengalaman",
+    contact: "Kontak",
+  },
+  hero: {
+    role: "Pengembang Mobile & Web",
+    headline: "Membangun pengalaman digital yang bermakna.",
+    subheadline: "Saya membuat aplikasi mobile dan web dengan fokus pada kegunaan, performa, dan desain yang elegan.",
+    cta: "Lihat Proyek",
+  },
+  projects: {
+    title: "Proyek Unggulan",
+    viewDetails: "Lihat Detail",
+  },
+  about: {
+    title: "Tentang",
+    description: "Saya seorang mahasiswa Informatika yang bersemangat tentang Flutter, Laravel, Java, dan pengembangan perangkat lunak. Saya menikmati membuat aplikasi yang memecahkan masalah nyata dan memberikan pengalaman yang bermakna bagi pengguna. Dengan fondasi yang kuat dalam pengembangan mobile dan web, saya berusaha membangun perangkat lunak yang tidak hanya fungsional tetapi juga menyenangkan untuk digunakan.",
+    skillsTitle: "Keahlian & Teknologi",
+  },
+  experience: {
+    title: "Pengalaman",
+  },
+  contact: {
+    title: "Mari bekerja sama.",
+    subtitle: "Hubungi saya dan mari ciptakan sesuatu yang luar biasa.",
+    email: "Email",
+    github: "GitHub",
+    linkedin: "LinkedIn",
+  },
+  projectDetail: {
+    backToProjects: "Kembali ke Proyek",
+    role: "Peran",
+    year: "Tahun",
+    techStack: "Tech Stack",
+    problemTitle: "Problem",
+    background: "Latar Belakang",
+    challenges: "Tantangan",
+    objectives: "Tujuan",
+    discussionTitle: "Pembahasan",
+    requirements: "Persyaratan",
+    architecture: "Arsitektur",
+    technologyStack: "Tech Stack",
+    developmentProcess: "Proses Pengembangan",
+    screenshots: "Screenshot",
+    resultTitle: "Hasil",
+    outcome: "Hasil",
+    featuresDelivered: "Fitur yang Disampaikan",
+    lessonsLearned: "Pelajaran yang Dipetik",
+  },
+  footer: {
+    rights: "Hak cipta dilindungi.",
+  },
+};
