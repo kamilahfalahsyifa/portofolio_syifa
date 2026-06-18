@@ -4,25 +4,44 @@ export default {
     projects: "Projects",
     about: "About",
     experience: "Experience",
+    skills: "Skills",
+    education: "Education",
     contact: "Contact",
   },
   hero: {
-    role: "Mobile & Web Developer",
-    headline: "Building digital experiences that matter.",
-    subheadline: "I create mobile and web applications with a focus on usability, performance, and elegant design.",
+    name: "Kamilah Falah Syifa",
+    role: "Mobile Developer & UI/UX Designer",
+    headline1: "Building mobile apps, web platforms,",
+    headline2: "and digital experiences focused on",
+    headline3: "usability and clean design.",
     cta: "View Projects",
+    ctaSecondary: "Contact Me",
+  },
+  about: {
+    title: "About Me",
+    description: "I am a Mobile Developer and UI/UX Designer who enjoys creating digital products that solve real-world problems.",
+    location: "Location",
+    locationValue: "Semarang, Indonesia",
+    university: "University",
+    universityValue: "Universitas Dian Nuswantoro",
+    focus: "Current Focus",
+    focusValue: "Mobile Development & UI/UX Design",
   },
   projects: {
     title: "Featured Projects",
     viewDetails: "View Details",
   },
-  about: {
-    title: "About",
-    description: "I am an Informatics student passionate about Flutter, Laravel, Java, and software development. I enjoy creating applications that solve real problems and provide meaningful experiences to users. With a strong foundation in mobile and web development, I strive to build software that is not only functional but also delightful to use.",
-    skillsTitle: "Skills & Technologies",
-  },
   experience: {
     title: "Experience",
+  },
+  organization: {
+    title: "Organization",
+  },
+  skills: {
+    title: "Skills",
+  },
+  education: {
+    title: "Education",
   },
   contact: {
     title: "Let's work together.",
@@ -30,6 +49,7 @@ export default {
     email: "Email",
     github: "GitHub",
     linkedin: "LinkedIn",
+    instagram: "Instagram",
   },
   projectDetail: {
     backToProjects: "Back to Projects",

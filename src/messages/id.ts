@@ -4,25 +4,44 @@ export default {
     projects: "Proyek",
     about: "Tentang",
     experience: "Pengalaman",
+    skills: "Keahlian",
+    education: "Pendidikan",
     contact: "Kontak",
   },
   hero: {
-    role: "Pengembang Mobile & Web",
-    headline: "Membangun pengalaman digital yang bermakna.",
-    subheadline: "Saya membuat aplikasi mobile dan web dengan fokus pada kegunaan, performa, dan desain yang elegan.",
+    name: "Kamilah Falah Syifa",
+    role: "Pengembang Mobile & Desainer UI/UX",
+    headline1: "Membangun aplikasi mobile, platform web,",
+    headline2: "dan pengalaman digital yang fokus pada",
+    headline3: "kegunaan dan desain yang bersih.",
     cta: "Lihat Proyek",
+    ctaSecondary: "Hubungi Saya",
+  },
+  about: {
+    title: "Tentang Saya",
+    description: "Saya adalah Pengembang Mobile dan Desainer UI/UX yang menikmati pembuatan produk digital yang memecahkan masalah nyata.",
+    location: "Lokasi",
+    locationValue: "Semarang, Indonesia",
+    university: "Universitas",
+    universityValue: "Universitas Dian Nuswantoro",
+    focus: "Fokus Saat Ini",
+    focusValue: "Pengembangan Mobile & Desain UI/UX",
   },
   projects: {
     title: "Proyek Unggulan",
     viewDetails: "Lihat Detail",
   },
-  about: {
-    title: "Tentang",
-    description: "Saya seorang mahasiswa Informatika yang bersemangat tentang Flutter, Laravel, Java, dan pengembangan perangkat lunak. Saya menikmati membuat aplikasi yang memecahkan masalah nyata dan memberikan pengalaman yang bermakna bagi pengguna. Dengan fondasi yang kuat dalam pengembangan mobile dan web, saya berusaha membangun perangkat lunak yang tidak hanya fungsional tetapi juga menyenangkan untuk digunakan.",
-    skillsTitle: "Keahlian & Teknologi",
-  },
   experience: {
     title: "Pengalaman",
+  },
+  organization: {
+    title: "Organisasi",
+  },
+  skills: {
+    title: "Keahlian",
+  },
+  education: {
+    title: "Pendidikan",
   },
   contact: {
     title: "Mari bekerja sama.",
@@ -30,6 +49,7 @@ export default {
     email: "Email",
     github: "GitHub",
     linkedin: "LinkedIn",
+    instagram: "Instagram",
   },
   projectDetail: {
     backToProjects: "Kembali ke Proyek",

@@ -1,27 +1,33 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MapPin, GraduationCap, Focus } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
-const skills = {
-  mobile: ["Flutter", "Dart", "Firebase", "REST API", "Google ML Kit"],
-  backend: ["Node.js", "Laravel", "PostgreSQL", "Redis", "REST API"],
-  frontend: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
-  tools: ["Git", "Figma", "VS Code", "Android Studio", "Xcode"],
+const infoCards = [
+  { key: "location", icon: MapPin },
+  { key: "university", icon: GraduationCap },
+  { key: "focus", icon: Focus },
+];
+
+const infoValues: Record<string, string> = {
+  location: "locationValue",
+  university: "universityValue",
+  focus: "focusValue",
 };
 
 export default function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-32 px-6 bg-[#F5F5F7]">
+    <section id="about" className="py-32 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-[#1D1D1F] mb-12"
+          className="text-4xl md:text-5xl font-bold text-[#1D1D1F] mb-6"
         >
           {t("about.title")}
         </motion.h2>
@@ -31,7 +37,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xl text-[#6E6E73] leading-relaxed mb-16"
+          className="text-xl text-[#6E6E73] leading-relaxed mb-12"
         >
           {t("about.description")}
         </motion.p>
@@ -41,37 +47,18 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          <h3 className="text-2xl font-semibold text-[#1D1D1F] mb-8">
-            {t("about.skillsTitle")}
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {Object.entries(skills).map(([category, items], index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-                className="bg-white rounded-2xl p-6"
-              >
-                <h4 className="text-lg font-semibold text-[#1D1D1F] mb-4 capitalize">
-                  {category}
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1.5 bg-[#F5F5F7] rounded-full text-sm text-[#6E6E73]"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {infoCards.map((card) => (
+            <div
+              key={card.key}
+              className="bg-[#F5F5F7] rounded-2xl p-6"
+            >
+              <card.icon className="w-6 h-6 text-[#0071E3] mb-4" />
+              <p className="text-sm text-[#6E6E73] mb-1">{t(`about.${card.key}`)}</p>
+              <p className="text-lg font-medium text-[#1D1D1F]">{t(`about.${infoValues[card.key]}`)}</p>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

@@ -1,20 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
   const { t } = useLanguage();
 
   const socials = [
-    { name: t("contact.email"), url: "mailto:syifa@example.com", icon: Mail },
-    { name: t("contact.github"), url: "https://github.com", icon: Github },
-    { name: t("contact.linkedin"), url: "https://linkedin.com", icon: Linkedin },
+    { name: "email", label: t("contact.email"), url: "mailto:kamilahfsyifa@gamil.com", icon: Mail },
+    { name: "github", label: t("contact.github"), url: "hhttps://github.com/kamilahfalahsyifa", icon: Github },
+    { name: "linkedin", label: t("contact.linkedin"), url: "https://www.linkedin.com/in/kamilah-falah-syifa/", icon: Linkedin },
+    { name: "instagram", label: t("contact.instagram"), url: "https://instagram.com", icon: Instagram },
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 bg-[#F5F5F7]">
+    <section id="contact" className="py-32 px-6 bg-white">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +42,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {socials.map((social) => (
             <a
@@ -49,10 +50,10 @@ export default function Contact() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-4 bg-white rounded-full text-[#1D1D1F] hover:bg-[#0071E3] hover:text-white transition-colors duration-200"
+              className="flex items-center justify-center gap-3 px-6 py-5 bg-[#F5F5F7] rounded-2xl text-[#1D1D1F] hover:bg-[#0071E3] hover:text-white transition-colors duration-200"
             >
               <social.icon className="w-5 h-5" />
-              <span className="font-medium">{social.name}</span>
+              <span className="font-medium text-sm">{social.label}</span>
             </a>
           ))}
         </motion.div>
