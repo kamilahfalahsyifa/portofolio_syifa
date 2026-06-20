@@ -33,12 +33,72 @@ export default {
   },
   experience: {
     title: "Experience",
+    items: [
+      {
+        company: "Bengkel Koding",
+        role: "Mobile Developer",
+        period: "Sep 2025 – Present",
+        description:
+          "Developing and maintaining a Flutter-based mobile application for a SaaS Fleet Management System that supports driver operations and business workflows. Collaborating with backend and web teams to deliver scalable and reliable mobile solutions.",
+        highlights: [
+          "Developed responsive interfaces using Flutter.",
+          "Applied the BLoC pattern for maintainable state management.",
+          "Integrated RESTful APIs with backend services.",
+          "Implemented GPS and receipt-scanning features.",
+        ],
+      },
+      {
+        company: "Bengkel Koding",
+        role: "Teaching Assistant",
+        period: "Jan 2025 – Present",
+        description:
+          "Supporting web development classes by teaching Laravel fundamentals and MVC architecture while providing feedback and mentoring students through project-based learning.",
+        highlights: [
+          "Conducted weekly learning sessions.",
+          "Taught Laravel and MVC architecture.",
+          "Evaluated student projects.",
+          "Mentored students in fullstack development.",
+        ],
+      },
+      {
+        company: "Dinas Komunikasi, Informatika, Statistik dan Persandian Kota Semarang",
+        role: "Web Developer Intern",
+        period: "Aug 2025 – Sep 2025",
+        description:
+          "Developed the KKO PAUD Kota Semarang website and collaborated with stakeholders to deliver responsive and user-friendly web solutions tailored to organizational needs.",
+        highlights: [
+          "Built the website using PHP and MySQL.",
+          "Designed responsive interfaces with Bootstrap.",
+          "Implemented CRUD and image upload features.",
+          "Gathered requirements with stakeholders.",
+        ],
+      },
+    ],
   },
   organization: {
     title: "Organization",
   },
   skills: {
-    title: "Skills",
+    title: "Tools & Technologies",
+    subtitle:
+      "Technologies and tools I use to design, build, and deliver digital products.",
+    tools: [
+      { name: "Flutter", slug: "flutter" },
+      { name: "Dart", slug: "dart" },
+      { name: "Firebase", slug: "firebase" },
+      { name: "PHP", slug: "php" },
+      { name: "MySQL", slug: "mysql" },
+      { name: "Figma", slug: "figma" },
+      { name: "Git", slug: "git" },
+      { name: "GitHub", slug: "github" },
+      { name: "VS Code", slug: "vscode" },
+      { name: "REST API", slug: "restapi" },
+      { name: "Laravel", slug: "laravel" },
+      { name: "JavaScript", slug: "javascript" },
+      { name: "TypeScript", slug: "typescript" },
+      { name: "Tailwind CSS", slug: "tailwindcss" },
+      { name: "Next.js", slug: "nextdotjs" },
+    ],
   },
   education: {
     title: "Education",

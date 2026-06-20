@@ -33,12 +33,72 @@ export default {
   },
   experience: {
     title: "Pengalaman",
+    items: [
+      {
+        company: "Bengkel Koding",
+        role: "Pengembang Mobile",
+        period: "Sep 2025 – Sekarang",
+        description:
+          "Mengembangkan dan memelihara aplikasi mobile berbasis Flutter untuk Fleet Management System berbasis SaaS yang mendukung operasional pengemudi dan proses bisnis. Berkolaborasi dengan tim backend dan web untuk menghasilkan solusi mobile yang andal dan mudah dikembangkan.",
+        highlights: [
+          "Mengembangkan antarmuka responsif menggunakan Flutter.",
+          "Menerapkan pola BLoC untuk manajemen state yang terstruktur.",
+          "Mengintegrasikan REST API dengan layanan backend.",
+          "Mengimplementasikan fitur lokasi dan pemindaian struk.",
+        ],
+      },
+      {
+        company: "Bengkel Koding",
+        role: "Asisten Pengajar",
+        period: "Jan 2025 – Sekarang",
+        description:
+          "Mendukung kegiatan pembelajaran pengembangan web dengan mengajarkan Laravel dan arsitektur MVC, serta memberikan bimbingan dan evaluasi kepada mahasiswa melalui pendekatan berbasis proyek.",
+        highlights: [
+          "Mengadakan sesi pembelajaran setiap minggu.",
+          "Mengajarkan Laravel dan arsitektur MVC.",
+          "Mengevaluasi proyek mahasiswa.",
+          "Membimbing mahasiswa dalam pengembangan fullstack.",
+        ],
+      },
+      {
+        company: "Dinas Komunikasi, Informatika, Statistik dan Persandian Kota Semarang",
+        role: "Magang Web Developer",
+        period: "Agt 2025 – Sep 2025",
+        description:
+          "Mengembangkan website KKO PAUD Kota Semarang dan berkolaborasi dengan stakeholder untuk menghasilkan solusi web yang responsif serta sesuai dengan kebutuhan organisasi.",
+        highlights: [
+          "Membangun website menggunakan PHP dan MySQL.",
+          "Mendesain antarmuka responsif dengan Bootstrap.",
+          "Mengimplementasikan fitur CRUD dan unggah gambar.",
+          "Melakukan diskusi kebutuhan bersama stakeholder.",
+        ],
+      },
+    ],
   },
   organization: {
     title: "Organisasi",
   },
   skills: {
-    title: "Keahlian",
+    title: "Tools & Teknologi",
+    subtitle:
+      "Teknologi dan tools yang saya gunakan untuk merancang, membangun, dan mengembangkan produk digital.",
+    tools: [
+      { name: "Flutter", slug: "flutter" },
+      { name: "Dart", slug: "dart" },
+      { name: "Firebase", slug: "firebase" },
+      { name: "PHP", slug: "php" },
+      { name: "MySQL", slug: "mysql" },
+      { name: "Figma", slug: "figma" },
+      { name: "Git", slug: "git" },
+      { name: "GitHub", slug: "github" },
+      { name: "VS Code", slug: "vscode" },
+      { name: "REST API", slug: "restapi" },
+      { name: "Laravel", slug: "laravel" },
+      { name: "JavaScript", slug: "javascript" },
+      { name: "TypeScript", slug: "typescript" },
+      { name: "Tailwind CSS", slug: "tailwindcss" },
+      { name: "Next.js", slug: "nextdotjs" },
+    ],
   },
   education: {
     title: "Pendidikan",
