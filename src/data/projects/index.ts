@@ -5,6 +5,15 @@ import zyparkingId from "./zyparking/id";
 import kkoPaudMetadata from "./kko-paud-semarang/metadata";
 import kkoPaudEn from "./kko-paud-semarang/en";
 import kkoPaudId from "./kko-paud-semarang/id";
+import ecoposMetadata from "./ecopos/metadata";
+import ecoposEn from "./ecopos/en";
+import ecoposId from "./ecopos/id";
+import stiMobileMetadata from "./sti-mobile/metadata";
+import stiMobileEn from "./sti-mobile/en";
+import stiMobileId from "./sti-mobile/id";
+import kissMetadata from "./kiss/metadata";
+import kissEn from "./kiss/en";
+import kissId from "./kiss/id";
 
 type ProjectModule = {
   metadata: ProjectMetadata;
@@ -18,12 +27,26 @@ const projects: Record<string, ProjectModule> = {
     en: kkoPaudEn,
     id: kkoPaudId,
   },
+  ecopos: {
+    metadata: ecoposMetadata,
+    en: ecoposEn,
+    id: ecoposId,
+  },
+  "sti-mobile": {
+    metadata: stiMobileMetadata,
+    en: stiMobileEn,
+    id: stiMobileId,
+  },
+  kiss: {
+    metadata: kissMetadata,
+    en: kissEn,
+    id: kissId,
+  },
   zyparking: {
     metadata: zyparkingMetadata,
     en: zyparkingEn,
     id: zyparkingId,
   },
-  
 };
 
 export function getProject(slug: string, lang: Language): ProjectDetail | undefined {
@@ -56,4 +79,17 @@ export function getAvailableSlugs(): string[] {
 
 export function getAllMetadata(): ProjectMetadata[] {
   return Object.values(projects).map((p) => p.metadata);
+}
+
+export type ProjectCard = ProjectMetadata & { shortDescription: string };
+
+/**
+ * Returns the project list augmented with the localized short description,
+ * for use by the Projects section's card grid (no file writes).
+ */
+export function getAllProjectCards(lang: Language): ProjectCard[] {
+  return Object.values(projects).map((p) => {
+    const content = lang === "id" ? p.id : p.en;
+    return { ...p.metadata, shortDescription: content.shortDescription };
+  });
 }

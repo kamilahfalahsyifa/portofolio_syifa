@@ -7,6 +7,8 @@ export const metadata: ProjectMetadata = {
   year: "2025",
   role: "Product Lead & UI/UX Designer",
   techStack: ["Figma"],
+  category: "uiux",
+  team: "Solo Project",
 };
 
 export default metadata;

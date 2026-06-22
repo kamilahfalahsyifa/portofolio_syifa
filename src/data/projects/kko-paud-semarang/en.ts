@@ -2,68 +2,84 @@ import type { ProjectContent } from "@/types/project";
 
 const kkoPaudEn: ProjectContent = {
   title: "KKO PAUD Semarang City",
-  description: "Organization Profile Website and Community Information Platform",
-  shortDescription: "Developed during an internship at the Communication and Information Office (Diskominfo) of Semarang City to provide a centralized digital platform for KKO PAUD.",
+  subtitle: "Organization Profile Website & Community Information System",
+  description:
+    "KKO PAUD Semarang City is an organization focused on early childhood education coordination across the city. This platform was built to centralize their organizational profile, activities, and member information in one accessible place.",
+  shortDescription:
+    "Organization profile website and community information system for KKO PAUD Semarang City.",
   year: "2024",
-  role: "Frontend Developer & UI/UX Designer (Internship)",
+  role: "Fullstack Developer & UI/UX Designer (Internship)",
   techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "Figma"],
+  introduction: [
+    "KKO PAUD Semarang City is an organization focused on early childhood education coordination across the city. This platform was built to centralize their organizational profile, activities, and member information in one accessible place.",
+  ],
+  decisions: [
+    {
+      label: "Decision",
+      title: "Laravel-powered CMS website",
+      description:
+        "We built an organization profile website using Laravel with a simple content management system, allowing administrators to update information independently without relying on developers for every change.",
+    },
+  ],
   problem: {
     background:
-      "KKO PAUD Semarang City is an organization focused on collaboration and development in early childhood education. Prior to this project, information about organizational profiles, activities, news, and documentation was distributed across multiple channels, making it difficult for members and the public to access information efficiently.",
+      "Before this platform, KKO PAUD Semarang City had no central place to publish information about the organization, its activities, or its members. Communication was fragmented across social media, and the public had no reliable source for official updates.",
     challenges: [
-      "Organizational information was not centralized.",
-      "News and activity updates relied heavily on social media.",
+      "Organizational information was scattered across multiple channels with no central source of truth.",
       "Activity documentation was difficult to archive and retrieve.",
-      "The public had limited access to official organizational information.",
-      "The organization lacked a dedicated digital platform to strengthen its credibility.",
+      "News and updates relied entirely on social media platforms.",
+      "The public had no access to official organizational information.",
+      "There was no digital platform to strengthen the organization's credibility.",
     ],
     objectives: [
-      "Build an official website as a centralized information platform.",
-      "Provide organization profiles, news, activities, galleries, and contact information.",
-      "Improve information distribution to members and the public.",
-      "Strengthen organizational credibility through a professional online presence.",
-      "Provide an easy-to-manage content management system for administrators.",
+      "Provide a single official source for organizational information.",
+      "Make activity documentation easy to archive and retrieve.",
+      "Publish news and updates independently of social media.",
+      "Give the public a reliable channel for official information.",
+      "Strengthen the organization's digital credibility.",
     ],
   },
   discussion: {
     requirements: [
-      "Organization profile pages.",
-      "News and article management.",
-      "Activity gallery.",
-      "Member and organizational structure information.",
-      "Contact and legal information pages.",
-      "Administrative dashboard for content management.",
+      "Official organization profile page.",
+      "News and article management system.",
+      "Activity documentation gallery.",
+      "Member and legal information pages.",
+      "Admin dashboard for content management.",
+      "Responsive design for desktop and mobile.",
     ],
     architecture:
-      "The website was designed using a content-driven approach with a strong focus on information accessibility. Navigation was intentionally simplified to help users find important information quickly. The interface was developed responsively to ensure a consistent experience across desktop and mobile devices.",
+      "The website is built with Laravel as a server-rendered PHP application. A simple admin dashboard lets organization administrators manage news, activities, galleries, and legal documents independently, without requiring code changes for routine content updates.",
     technologyStack: [
-      { name: "PHP", description: "Used to build the backend functionality and manage dynamic website content." },
-      { name: "MySQL", description: "Used to store articles, galleries, organizational profiles, and supporting information." },
-      { name: "Bootstrap", description: "Used to create a responsive and consistent user interface." },
-      { name: "Figma", description: "Used for wireframing and interface design before implementation." },
+      { name: "Laravel", description: "Server-side PHP framework powering the website and admin CMS." },
+      { name: "MySQL", description: "Relational database for storing news, activities, and member information." },
+      { name: "Bootstrap", description: "CSS framework for a responsive and consistent user interface." },
+      { name: "Figma", description: "UI/UX design tool used for wireframing and interface design." },
     ],
     developmentProcess:
-      "The development process started with stakeholder discussions and requirements gathering. Information architecture and UI designs were prepared before implementation. The website was then developed using Laravel with a content management workflow that allows administrators to update content independently without modifying source code.",
+      "The project was developed iteratively in close collaboration with the organization. The information architecture was mapped first, then wireframes and UI were designed in Figma, followed by Laravel implementation of the public website and the admin dashboard.",
     screenshots: [
-      "/projects/kkopaud/kko mockup.jpg",
-      "/projects/kkopaud/kko mockup.jpg",
+      "/projects/kkopaud/cover.jpg",
+      "/projects/kkopaud/banner.jpg",
     ],
   },
   result: {
     outcome:
-      "The website successfully became the official information platform for KKO PAUD Semarang City. Important information is now centralized and easily accessible, improving communication, information distribution, and the organization's digital presence.",
+      "The website successfully became the official information platform for KKO PAUD Semarang City, improving communication, simplifying information distribution, and strengthening the organization's digital presence.",
     featuresDelivered: [
-      "Organization profile website.",
+      "Official organization profile page.",
       "News and article management system.",
-      "Activity gallery.",
+      "Activity documentation gallery.",
       "Member and legal information pages.",
-      "Administrative dashboard.",
+      "Admin dashboard for content management.",
       "Responsive design for desktop and mobile.",
     ],
     lessonsLearned: [
-      "Understanding non-technical user needs is essential when building organizational information systems.",
-      "Well-structured information architecture significantly improves usability.",
-      "Effective stakeholder communication helps streamline development and revision cycles.",
+      "Building administrative systems requires balancing functionality and simplicity.",
+      "Responsive design is essential because users access information from multiple devices.",
+      "Separating public and admin modules improves maintainability.",
+      "File uploads and media management need careful organization.",
+      "User-friendly interfaces significantly reduce operational complexity.",
     ],
   },
 };

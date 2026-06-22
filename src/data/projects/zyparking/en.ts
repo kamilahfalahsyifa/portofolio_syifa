@@ -7,6 +7,37 @@ const zyparkingEn: ProjectContent = {
   year: "2025",
   role: "Product Lead & UI/UX Designer",
   techStack: ["Figma"],
+  introduction: [
+    "ZyParking is a self-initiated concept exploring what a parking experience could feel like when it is treated as a connected journey, from planning a trip to walking out of the building, rather than a fragmented stop along the way.",
+    "The project is a design exploration, not a shipped product. It gave me room to think about indoor navigation, real-time availability, and QR access as a single system, and to test how far Figma could carry a product idea before any code is written.",
+  ],
+  decisions: [
+    {
+      label: "Decision 01",
+      title: "Color-coded parking map",
+      description:
+        "To improve readability while driving, the parking slots were simplified into red and green indicators. Drivers can see availability at a glance instead of decoding numbers or empty lots.",
+    },
+    {
+      label: "Decision 02",
+      title: "Hybrid QR flow",
+      description:
+        "Different parking facilities use different hardware, so the system supports both scanning a kiosk QR and presenting a personal QR at the gate. One flow, two entry modes.",
+    },
+    {
+      label: "Decision 03",
+      title: "Premium membership",
+      description:
+        "Subscription was introduced to support long-term sustainability. Members get priority slots, faster exit, and bundled services, framed as convenience rather than a paywall.",
+    },
+  ],
+  contributions: [
+    "Conducted user research and mapped the end-to-end parking journey.",
+    "Designed the full UI/UX system in Figma, including flow, components, and visual style.",
+    "Designed the color-coded parking availability map and indoor navigation flow.",
+    "Prototyped the QR-based entry and exit system with reservation flow.",
+    "Iterated on the design based on feedback to simplify the parking experience.",
+  ],
   problem: {
     background:
       "Finding a parking space in large buildings such as shopping malls, office complexes, and public facilities can be surprisingly time-consuming. Drivers often spend several minutes navigating crowded parking areas without knowing where available spaces are located. Beyond the inconvenience, this creates unnecessary traffic inside parking facilities, increases fuel consumption, and negatively impacts the overall visitor experience.",

@@ -2,68 +2,84 @@ import type { ProjectContent } from "@/types/project";
 
 const kkoPaudId: ProjectContent = {
   title: "KKO PAUD Kota Semarang",
-  description: "Website Profil Organisasi dan Sistem Informasi Komunitas",
-  shortDescription: "Dikembangkan selama program magang di Dinas Komunikasi dan Informatika (Diskominfo) Kota Semarang untuk menyediakan platform digital terpusat bagi KKO PAUD.",
+  subtitle: "Website Profil Organisasi & Sistem Informasi Komunitas",
+  description:
+    "KKO PAUD Kota Semarang adalah organisasi yang berfokus pada koordinasi pendidikan anak usia dini di tingkat kota. Platform ini dibangun untuk memusatkan profil organisasi, kegiatan, dan informasi anggota dalam satu tempat yang mudah diakses.",
+  shortDescription:
+    "Website profil organisasi dan sistem informasi komunitas untuk KKO PAUD Kota Semarang.",
   year: "2024",
-  role: "Pengembang Frontend & Desainer UI/UX (Magang)",
+  role: "Fullstack Developer & UI/UX Designer (Magang)",
   techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "Figma"],
+  introduction: [
+    "KKO PAUD Kota Semarang adalah organisasi yang berfokus pada koordinasi pendidikan anak usia dini di tingkat kota. Platform ini dibangun untuk memusatkan profil organisasi, kegiatan, dan informasi anggota dalam satu tempat yang mudah diakses.",
+  ],
+  decisions: [
+    {
+      label: "Keputusan",
+      title: "Website CMS berbasis Laravel",
+      description:
+        "Kami membangun website profil organisasi berbasis Laravel dengan sistem manajemen konten sederhana, sehingga pengurus dapat memperbarui informasi secara mandiri tanpa bergantung pada developer untuk setiap perubahan.",
+    },
+  ],
   problem: {
     background:
-      "KKO PAUD Kota Semarang merupakan organisasi yang mewadahi kolaborasi dan pengembangan pendidikan anak usia dini di Kota Semarang. Sebelum website ini dikembangkan, informasi mengenai profil organisasi, kegiatan, berita, dan dokumentasi masih disebarkan melalui berbagai media yang terpisah sehingga sulit diakses secara terpusat oleh anggota maupun masyarakat umum.",
+      "Sebelum adanya platform ini, KKO PAUD Kota Semarang tidak memiliki satu tempat terpusat untuk mempublikasikan informasi tentang organisasi, kegiatan, maupun anggotanya. Komunikasi tersebar di media sosial, dan publik tidak memiliki sumber resmi yang dapat diandalkan untuk mendapatkan pembaruan.",
     challenges: [
-      "Informasi organisasi belum tersedia dalam satu platform yang terintegrasi.",
-      "Publikasi kegiatan dan berita masih dilakukan melalui media sosial.",
-      "Dokumentasi kegiatan sulit diarsipkan dan dicari kembali.",
-      "Masyarakat kesulitan memperoleh informasi resmi mengenai organisasi.",
-      "Belum tersedia media digital yang dapat meningkatkan kredibilitas organisasi.",
+      "Informasi organisasi tersebar di berbagai channel tanpa satu sumber yang terpusat.",
+      "Dokumentasi kegiatan sulit diarsipkan dan diakses kembali.",
+      "Berita dan pembaruan sepenuhnya mengandalkan platform media sosial.",
+      "Publik tidak memiliki akses ke informasi resmi organisasi.",
+      "Tidak ada platform digital yang memperkuat kredibilitas organisasi.",
     ],
     objectives: [
-      "Membangun website resmi sebagai pusat informasi organisasi.",
-      "Menyediakan halaman profil, kegiatan, berita, galeri, dan kontak.",
-      "Mempermudah penyebaran informasi kepada anggota dan masyarakat.",
-      "Meningkatkan profesionalisme dan kredibilitas organisasi melalui kehadiran digital.",
-      "Menyediakan sistem pengelolaan konten yang mudah digunakan oleh administrator.",
+      "Menyediakan satu sumber resmi untuk informasi organisasi.",
+      "Memudahkan dokumentasi kegiatan untuk diarsipkan dan diakses kembali.",
+      "Menerbitkan berita dan pembaruan secara independen dari media sosial.",
+      "Memberikan publik saluran resmi untuk mengakses informasi organisasi.",
+      "Memperkuat kredibilitas digital organisasi.",
     ],
   },
   discussion: {
     requirements: [
-      "Halaman profil organisasi.",
-      "Manajemen berita dan artikel.",
+      "Halaman profil organisasi resmi.",
+      "Sistem manajemen berita dan artikel.",
       "Galeri dokumentasi kegiatan.",
-      "Informasi anggota dan struktur organisasi.",
-      "Halaman kontak dan informasi legalitas.",
-      "Dashboard administrasi untuk pengelolaan konten.",
+      "Halaman informasi anggota dan legalitas.",
+      "Dashboard admin untuk pengelolaan konten.",
+      "Desain responsif untuk desktop dan mobile.",
     ],
     architecture:
-      "Website dirancang menggunakan pendekatan content-driven dengan fokus pada kemudahan akses informasi. Struktur navigasi dibuat sederhana agar pengguna dapat menemukan informasi penting hanya dalam beberapa klik. Antarmuka dirancang responsif sehingga dapat digunakan dengan nyaman pada perangkat desktop maupun mobile.",
+      "Website dibangun dengan Laravel sebagai aplikasi PHP yang di-render di sisi server. Dashboard admin yang sederhana memungkinkan pengurus organisasi mengelola berita, kegiatan, galeri, dan dokumen legalitas secara mandiri, tanpa memerlukan perubahan kode untuk pembaruan konten rutin.",
     technologyStack: [
-      { name: "PHP", description: "Digunakan untuk membangun fungsionalitas backend dan mengelola konten website secara dinamis." },
-      { name: "MySQL", description: "Digunakan untuk menyimpan data berita, galeri, profil organisasi, dan informasi lainnya." },
-      { name: "Bootstrap", description: "Digunakan untuk membangun antarmuka yang responsif dan konsisten." },
-      { name: "Figma", description: "Digunakan untuk merancang wireframe dan desain antarmuka sebelum implementasi." },
+      { name: "Laravel", description: "Framework PHP server-side yang menjalankan website dan admin CMS." },
+      { name: "MySQL", description: "Database relasional untuk menyimpan berita, kegiatan, dan informasi anggota." },
+      { name: "Bootstrap", description: "Framework CSS untuk antarmuka yang responsif dan konsisten." },
+      { name: "Figma", description: "Alat desain UI/UX yang digunakan untuk wireframing dan desain antarmuka." },
     ],
     developmentProcess:
-      "Pengembangan dimulai dengan proses analisis kebutuhan organisasi dan identifikasi informasi yang paling sering diakses oleh pengguna. Setelah penyusunan struktur informasi dan desain antarmuka, website diimplementasikan menggunakan Laravel dengan sistem manajemen konten yang memungkinkan administrator memperbarui informasi secara mandiri tanpa perlu melakukan perubahan kode.",
+      "Proyek dikembangkan secara iteratif dengan kolaborasi erat bersama pihak organisasi. Arsitektur informasi dipetakan terlebih dahulu, kemudian wireframe dan UI dirancang di Figma, lalu diimplementasikan menggunakan Laravel untuk website publik dan dashboard admin.",
     screenshots: [
-      "/projects/kkopaud/kko mockup.jpg",
-      "/projects/kkopaud/kko mockup.jpg",
+      "/projects/kkopaud/cover.jpg",
+      "/projects/kkopaud/banner.jpg",
     ],
   },
   result: {
     outcome:
-      "Website KKO PAUD Kota Semarang berhasil menjadi media informasi resmi organisasi yang dapat diakses secara publik. Seluruh informasi penting kini tersedia dalam satu platform terpusat sehingga mempermudah penyebaran informasi dan meningkatkan profesionalisme organisasi di era digital.",
+      "Website berhasil menjadi platform informasi resmi KKO PAUD Kota Semarang, meningkatkan komunikasi, mempermudah distribusi informasi, dan memperkuat kehadiran digital organisasi.",
     featuresDelivered: [
-      "Website profil organisasi.",
+      "Halaman profil organisasi resmi.",
       "Sistem manajemen berita dan artikel.",
       "Galeri dokumentasi kegiatan.",
       "Halaman informasi anggota dan legalitas.",
-      "Dashboard administrasi.",
+      "Dashboard admin untuk pengelolaan konten.",
       "Desain responsif untuk desktop dan mobile.",
     ],
     lessonsLearned: [
-      "Pentingnya memahami kebutuhan pengguna non-teknis saat merancang sistem informasi organisasi.",
-      "Struktur informasi yang baik memiliki peran besar dalam meningkatkan pengalaman pengguna.",
-      "Komunikasi yang efektif dengan stakeholder membantu mempercepat proses pengembangan dan revisi.",
+      "Membangun sistem administrasi membutuhkan keseimbangan antara fungsi dan kesederhanaan.",
+      "Desain responsif sangat penting karena pengguna mengakses informasi dari berbagai perangkat.",
+      "Pemisahan modul publik dan admin meningkatkan maintainability sistem.",
+      "Pengelolaan file dan media memerlukan struktur yang rapi.",
+      "Antarmuka yang mudah digunakan dapat mengurangi kompleksitas operasional.",
     ],
   },
 };

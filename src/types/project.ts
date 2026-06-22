@@ -27,13 +27,23 @@ export interface Project {
   };
 }
 
+export interface ProjectDecision {
+  label: string;
+  title: string;
+  description: string;
+}
+
 export interface ProjectContent {
   title: string;
+  subtitle?: string;
   description: string;
   shortDescription: string;
   year: string;
   role: string;
   techStack: string[];
+  introduction?: string[];
+  decisions?: ProjectDecision[];
+  contributions?: string[];
   problem: {
     background: string;
     challenges: string[];
@@ -53,6 +63,17 @@ export interface ProjectContent {
   };
 }
 
+export type ProjectCategory = "mobile" | "web" | "uiux";
+
+export interface ProjectLinks {
+  github?: string;
+  figma?: string;
+  website?: string;
+  playstore?: string;
+  appstore?: string;
+  video?: string;
+}
+
 export interface ProjectMetadata {
   slug: string;
   image: string;
@@ -60,6 +81,10 @@ export interface ProjectMetadata {
   year: string;
   role: string;
   techStack: string[];
+  category: ProjectCategory;
+  team?: string;
+  galleryImages?: string[];
+  links?: ProjectLinks;
 }
 
 export type Language = "en" | "id";
@@ -68,6 +93,9 @@ export interface ProjectDetail extends ProjectMetadata {
   title: string;
   description: string;
   shortDescription: string;
+  introduction?: string[];
+  decisions?: ProjectDecision[];
+  contributions?: string[];
   problem: {
     background: string;
     challenges: string[];
