@@ -14,6 +14,9 @@ import stiMobileId from "./sti-mobile/id";
 import kissMetadata from "./kiss/metadata";
 import kissEn from "./kiss/en";
 import kissId from "./kiss/id";
+import fleetManagementMetadata from "./fleet-management/metadata";
+import fleetManagementEn from "./fleet-management/en";
+import fleetManagementId from "./fleet-management/id";
 
 type ProjectModule = {
   metadata: ProjectMetadata;
@@ -36,6 +39,11 @@ const projects: Record<string, ProjectModule> = {
     metadata: stiMobileMetadata,
     en: stiMobileEn,
     id: stiMobileId,
+  },
+  "fleet-management": {
+    metadata: fleetManagementMetadata,
+    en: fleetManagementEn,
+    id: fleetManagementId,
   },
   kiss: {
     metadata: kissMetadata,
