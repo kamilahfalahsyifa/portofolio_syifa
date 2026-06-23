@@ -10,8 +10,8 @@ export default function Contact() {
   const socials = [
     { name: "email", label: t("contact.email"), url: "mailto:kamilahfsyifa@gamil.com", icon: Mail },
     { name: "github", label: t("contact.github"), url: "hhttps://github.com/kamilahfalahsyifa", icon: Github },
-    { name: "linkedin", label: t("contact.linkedin"), url: "https://www.linkedin.com/in/kamilah-falah-syifa/", icon: Linkedin },
-    { name: "instagram", label: t("contact.instagram"), url: "https://instagram.com", icon: Instagram },
+    { name: "linkedin", label: t("contact.linkedin"), url: "https://www.linkedin.com/in/kamilahfsyifa", icon: Linkedin },
+    { name: "instagram", label: t("contact.instagram"), url: "https://www.instagram.com/kf.syifaa/", icon: Instagram },
   ];
 
   return (
