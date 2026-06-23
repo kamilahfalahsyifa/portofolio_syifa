@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowLeft,
   ArrowRight,
   Github as GithubIcon,
   Figma as FigmaIcon,
@@ -58,7 +57,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
   if (!project) {
     return (
       <main className="bg-white min-h-screen" key={`${slug}-${language}-notfound`}>
-        <Navbar />
+        <Navbar mode="project" />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-[#1D1D1F] mb-4">
@@ -97,7 +96,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
       key={`${slug}-${language}`}
       className="bg-white min-h-screen text-[#1D1D1F]"
     >
-      <Navbar />
+      <Navbar mode="project" />
 
       {/* 1. HERO */}
       <section className="pt-24" key={`hero-${language}`}>
@@ -170,22 +169,11 @@ export default function ProjectClient({ slug }: { slug: string }) {
             </div>
           </div>
         </motion.div>
-
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="pt-12">
-            <Link
-              href="/#projects"
-              className="inline-flex items-center gap-2 text-gray-600 hover:text-[#1D1D1F] transition-colors text-sm"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              {t("projectDetail.backToProjects")}
-            </Link>
-          </div>
-        </div>
       </section>
 
       {/* 2. INTRODUCTION */}
       <Section
+        id="introduction"
         key={`intro-${language}`}
         eyebrow={t("projectDetail.introduction")}
         title={t("projectDetail.introduction")}
@@ -202,6 +190,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
 
       {/* 3. THE PROBLEM */}
       <Section
+        id="problem"
         key={`problem-${language}`}
         eyebrow={t("projectDetail.theProblem")}
         title={t("projectDetail.theProblem")}
@@ -261,6 +250,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
 
       {/* 5. THE SOLUTION */}
       <Section
+        id="solution"
         key={`solution-${language}`}
         eyebrow={t("projectDetail.theSolution")}
         title={t("projectDetail.theSolution")}
@@ -283,6 +273,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
 
       {/* OUTCOME */}
       <Section
+        id="outcome"
         key={`outcome-${language}`}
         eyebrow={t("projectDetail.outcome")}
         title={t("projectDetail.outcome")}
@@ -299,6 +290,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
 
       {/* 6. TECH STACK */}
       <Section
+        id="tech-stack"
         key={`tech-${language}`}
         eyebrow={t("projectDetail.techStack")}
         title={t("projectDetail.techStack")}
@@ -372,6 +364,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
 
       {/* 8. LESSONS LEARNED */}
       <Section
+        id="lessons-learned"
         key={`lessons-${language}`}
         eyebrow={t("projectDetail.lessonsLearned")}
         title={t("projectDetail.lessonsLearned")}
@@ -426,16 +419,22 @@ export default function ProjectClient({ slug }: { slug: string }) {
 }
 
 function Section({
+  id,
   eyebrow,
   title,
   children,
 }: {
+  id?: string;
   eyebrow: string;
   title: string;
   children: ReactNode;
 }) {
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section
+      id={id}
+      style={id ? { scrollMarginTop: "100px" } : undefined}
+      className="py-24 md:py-32 px-6"
+    >
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
