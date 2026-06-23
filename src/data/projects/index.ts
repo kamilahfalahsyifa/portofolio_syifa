@@ -92,12 +92,34 @@ export function getAllMetadata(): ProjectMetadata[] {
 export type ProjectCard = ProjectMetadata & { shortDescription: string };
 
 /**
+ * Preferred display order for the homepage Featured Projects section.
+ * Slugs not listed here will appear after these in their natural order.
+ */
+const PREFERRED_ORDER: string[] = [
+  "fleet-management",
+  "ecopos",
+  "sti-mobile",
+  "kiss",
+  "zyparking",
+  "kko-paud-semarang",
+];
+
+/**
  * Returns the project list augmented with the localized short description,
  * for use by the Projects section's card grid (no file writes).
  */
 export function getAllProjectCards(lang: Language): ProjectCard[] {
-  return Object.values(projects).map((p) => {
+  const cards = Object.values(projects).map((p) => {
     const content = lang === "id" ? p.id : p.en;
     return { ...p.metadata, shortDescription: content.shortDescription };
   });
+  const rank = new Map(PREFERRED_ORDER.map((slug, i) => [slug, i]));
+  return cards
+    .slice()
+    .sort((a, b) => {
+      const ra = rank.has(a.slug) ? (rank.get(a.slug) as number) : Number.MAX_SAFE_INTEGER;
+      const rb = rank.has(b.slug) ? (rank.get(b.slug) as number) : Number.MAX_SAFE_INTEGER;
+      if (ra !== rb) return ra - rb;
+      return a.slug.localeCompare(b.slug);
+    });
 }

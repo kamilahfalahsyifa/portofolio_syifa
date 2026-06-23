@@ -18,6 +18,8 @@ export const metadata: ProjectMetadata = {
     "Vite",
   ],
   category: "web",
+  categories: ["web"],
+  displayCategory: "web",
   team: "Solo Project",
 };
 

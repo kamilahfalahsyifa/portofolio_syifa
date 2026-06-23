@@ -65,6 +65,13 @@ export interface ProjectContent {
 
 export type ProjectCategory = "mobile" | "web" | "uiux";
 
+export type ProjectDisplayCategory =
+  | "mobile"
+  | "web"
+  | "saas"
+  | "pos"
+  | "information";
+
 export interface ProjectLinks {
   github?: string;
   figma?: string;
@@ -82,6 +89,8 @@ export interface ProjectMetadata {
   role: string;
   techStack: string[];
   category: ProjectCategory;
+  categories?: ProjectCategory[];
+  displayCategory?: ProjectDisplayCategory;
   team?: string;
   galleryImages?: string[];
   links?: ProjectLinks;

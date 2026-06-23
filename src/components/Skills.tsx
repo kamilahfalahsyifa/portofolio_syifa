@@ -7,28 +7,19 @@ import type { ComponentType, ReactNode } from "react";
 import {
   SiFlutter,
   SiDart,
-  SiFirebase,
   SiPhp,
   SiMysql,
   SiFigma,
   SiGit,
   SiGithub,
-  SiVscodium,
-  SiSwagger,
   SiLaravel,
-  SiJavascript,
-  SiTypescript,
-  SiTailwindcss,
   SiNextdotjs,
+  SiReact,
+  SiVuedotjs,
+  SiTypescript,
+  SiPostman,
 } from "react-icons/si";
 
-type ToolEntry = { name: string; slug: string };
-
-/**
- * Typed wrapper around the `.jsx` LogoLoop. The component ships as JSX so
- * TypeScript would otherwise infer `object` for the imported value; this
- * declaration restores full type-checking on the call site.
- */
 type LogoLoopProps = {
   logos: { node: ReactNode; title?: string; ariaLabel?: string; href?: string }[];
   speed?: number;
@@ -41,7 +32,10 @@ type LogoLoopProps = {
   fadeOut?: boolean;
   fadeOutColor?: string;
   scaleOnHover?: boolean;
-  renderItem?: (item: { node: ReactNode; title?: string; ariaLabel?: string }, key: number | string) => ReactNode;
+  renderItem?: (
+    item: { node: ReactNode; title?: string; ariaLabel?: string },
+    key: number | string
+  ) => ReactNode;
   ariaLabel?: string;
   className?: string;
   style?: React.CSSProperties;
@@ -49,111 +43,133 @@ type LogoLoopProps = {
 
 const LogoLoop = LogoLoopJsx as unknown as ComponentType<LogoLoopProps>;
 
-/** Map a message-tool slug to its Simple Icons component. */
-const ICON_MAP: Record<string, ComponentType<{ size?: number; className?: string }>> = {
-  flutter: SiFlutter,
-  dart: SiDart,
-  firebase: SiFirebase,
-  php: SiPhp,
-  mysql: SiMysql,
-  figma: SiFigma,
-  git: SiGit,
-  github: SiGithub,
-  // react-icons no longer ships an "SiVscode" export; VSCodium is the closest
-  // available mark, used here to represent the "VS Code" entry.
-  vscode: SiVscodium,
-  // Simple Icons has no canonical "REST API" brand; Swagger is the closest
-  // widely-recognized mark, used here as the icon for the "REST API" entry.
-  restapi: SiSwagger,
-  laravel: SiLaravel,
-  javascript: SiJavascript,
-  typescript: SiTypescript,
-  tailwindcss: SiTailwindcss,
-  nextdotjs: SiNextdotjs,
-};
+const techs: { name: string; Icon: ComponentType<{ size?: number; className?: string }> }[] = [
+  { name: "Flutter", Icon: SiFlutter },
+  { name: "Dart", Icon: SiDart },
+  { name: "Laravel", Icon: SiLaravel },
+  { name: "PHP", Icon: SiPhp },
+  { name: "MySQL", Icon: SiMysql },
+  { name: "Next.js", Icon: SiNextdotjs },
+  { name: "React", Icon: SiReact },
+  { name: "Vue.js", Icon: SiVuedotjs },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "Figma", Icon: SiFigma },
+  { name: "Git", Icon: SiGit },
+  { name: "GitHub", Icon: SiGithub },
+  { name: "Postman", Icon: SiPostman },
+];
+
+const categoryKeys = [
+  "mobile",
+  "frontend",
+  "backend",
+  "database",
+  "uiux",
+  "tools",
+] as const;
+type CategoryKey = (typeof categoryKeys)[number];
 
 export default function Skills() {
   const { t, messages } = useLanguage();
-  const tools = messages.skills.tools as ToolEntry[];
+  const items = messages.skills.items as Record<CategoryKey, string[]>;
 
-  const techLogos = tools.map((tool) => {
-    const Icon = ICON_MAP[tool.slug];
-    return {
-      node: (
-        <div
-          className="flex items-center gap-3 text-[#1D1D1F] opacity-75 transition-all duration-300 ease-out hover:opacity-100 hover:scale-110"
-          style={{ color: "#1D1D1F" }}
-        >
-          {Icon ? <Icon size={42} className="shrink-0" /> : null}
-          <span className="text-base font-medium tracking-tight whitespace-nowrap">
-            {tool.name}
-          </span>
-        </div>
-      ),
-      title: tool.name,
-      ariaLabel: tool.name,
-    };
-  });
+  const techLogos = techs.map(({ name, Icon }) => ({
+    node: (
+      <div
+        className="flex items-center gap-3 grayscale opacity-70 transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+        style={{ color: "#1D1D1F" }}
+      >
+        <Icon size={36} className="shrink-0" />
+        <span className="text-sm font-medium tracking-tight whitespace-nowrap">
+          {name}
+        </span>
+      </div>
+    ),
+    title: name,
+    ariaLabel: name,
+  }));
 
   return (
-    <section id="skills" className="py-32 px-6 bg-white">
+    <section id="skills" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-20"
+          className="max-w-3xl mb-10"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1D1D1F] tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1F] tracking-tight">
             {t("skills.title")}
           </h2>
-          <p className="text-[#6E6E73] mt-5 text-base md:text-lg leading-relaxed">
+          <p className="text-[#6E6E73] mt-4 text-base md:text-lg leading-relaxed">
             {t("skills.subtitle")}
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative"
-        >
-          {/* Desktop loop */}
+        {/* LogoLoop animation */}
+        <div className="relative overflow-hidden mb-14">
           <div className="hidden md:block">
             <LogoLoop
               logos={techLogos}
               speed={90}
               direction="left"
               width="100%"
-              logoHeight={42}
+              logoHeight={48}
               gap={56}
               hoverSpeed={0}
+              pauseOnHover
               fadeOut
               fadeOutColor="#ffffff"
               scaleOnHover
               ariaLabel="Tools and Technologies"
             />
           </div>
-
-          {/* Mobile loop (reduced size + gap) */}
           <div className="md:hidden">
             <LogoLoop
               logos={techLogos}
-              speed={90}
+              speed={80}
               direction="left"
               width="100%"
-              logoHeight={32}
+              logoHeight={36}
               gap={32}
               hoverSpeed={0}
+              pauseOnHover
               fadeOut
               fadeOutColor="#ffffff"
               scaleOnHover
               ariaLabel="Tools and Technologies"
             />
           </div>
-        </motion.div>
+        </div>
+
+        {/* Categorized skill cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {categoryKeys.map((key, idx) => (
+            <motion.div
+              key={key}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
+              className="bg-[#F5F5F7] rounded-2xl p-5"
+            >
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-[#1D1D1F] mb-3">
+                {t(`skills.categories.${key}`)}
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {items[key]?.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-2.5 py-1 rounded-full bg-white text-xs text-[#1D1D1F] border border-[#E8E8ED]"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

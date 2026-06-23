@@ -94,7 +94,7 @@ export default function ProjectClient({ slug }: { slug: string }) {
   return (
     <main
       key={`${slug}-${language}`}
-      className="bg-white min-h-screen text-[#1D1D1F]"
+      className="bg-white min-h-screen text-[#1D1D1F] overflow-x-hidden"
     >
       <Navbar mode="project" />
 

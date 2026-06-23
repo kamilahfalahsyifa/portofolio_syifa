@@ -8,6 +8,8 @@ export const metadata: ProjectMetadata = {
   role: "Fullstack Developer & UI/UX Designer (Internship)",
   techStack: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "Figma"],
   category: "web",
+  categories: ["web", "uiux"],
+  displayCategory: "information",
   team: "Diskominfo Kota Semarang",
   links: {
     github: "https://github.com/liliianaa/webkkosemarang/",

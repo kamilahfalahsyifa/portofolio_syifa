@@ -8,6 +8,8 @@ export const metadata: ProjectMetadata = {
   role: "Product Lead & UI/UX Designer",
   techStack: ["Figma"],
   category: "uiux",
+  categories: ["uiux"],
+  displayCategory: "mobile",
   team: "Solo Project",
 };
 

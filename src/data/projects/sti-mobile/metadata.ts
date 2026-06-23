@@ -16,6 +16,8 @@ export const metadata: ProjectMetadata = {
     "REST API",
   ],
   category: "mobile",
+  categories: ["mobile"],
+  displayCategory: "mobile",
   team: "Collaborative project with backend and mobile developers",
 };
 

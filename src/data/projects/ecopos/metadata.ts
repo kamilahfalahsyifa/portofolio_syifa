@@ -12,16 +12,11 @@ export const metadata: ProjectMetadata = {
     "BLoC",
     "Dio",
     "GetIt",
-    "Shared Preferences",
-    "Geolocator",
-    "PDF",
-    "Printing",
   ],
   category: "mobile",
-  team: "3 people (2 Mobile Frontend, 1 Backend)",
-  links: {
-    github: "https://github.com/kamilahfalahsyifa/ecopos_mobile",
-  },
+  categories: ["mobile", "uiux"],
+  displayCategory: "pos",
+  team: "Collaborative project with backend developer",
 };
 
 export default metadata;

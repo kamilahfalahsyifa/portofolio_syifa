@@ -3,22 +3,20 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
-import Organization from "@/components/Organization";
 import Skills from "@/components/Skills";
-import Education from "@/components/Education";
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="bg-white text-[#1D1D1F]">
+    <main className="bg-white text-[#1D1D1F] overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
       <Projects />
       <Experience />
-      <Organization />
       <Skills />
-      <Education />
+      <Certificates />
       <Contact />
     </main>
   );

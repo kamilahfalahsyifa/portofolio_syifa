@@ -20,6 +20,8 @@ export const metadata: ProjectMetadata = {
     "Shared Preferences",
   ],
   category: "mobile",
+  categories: ["mobile", "uiux"],
+  displayCategory: "saas",
   team: "Collaborated with backend and web developers",
 };
 
