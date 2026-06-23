@@ -26,38 +26,61 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
+            {/* Greeting (small) */}
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-sm text-[#6E6E73] tracking-wide mb-3"
+              className="text-sm text-[#6E6E73] tracking-wide mb-2"
             >
-              {t("hero.name")}
+              {t("hero.greeting")}
             </motion.p>
 
+            {/* Name (largest) */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1D1D1F] mb-5 tracking-tight leading-[1.05]"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1D1D1F] mb-3 tracking-tight leading-[1.05]"
             >
-              {t("hero.role")}
+              {t("hero.name")}
             </motion.h1>
 
+            {/* Primary role (large accent) */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base md:text-lg text-[#1D1D1F]/85 leading-relaxed max-w-xl mb-5"
+              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[#0071E3] mb-2 tracking-tight"
             >
-              {t("hero.intro")}
+              {t("hero.primaryRole")}
+            </motion.p>
+
+            {/* Secondary role (smaller muted) */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-base md:text-lg text-[#6E6E73] mb-5"
+            >
+              {t("hero.secondaryRole")}
+            </motion.p>
+
+            {/* Professional summary (body) */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="text-base md:text-lg text-[#1D1D1F]/85 leading-relaxed max-w-xl mb-6"
+            >
+              {t("hero.summary")}
             </motion.p>
 
             {/* Achievement badges */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-wrap gap-2 mb-8"
             >
               {badges.map((b) => (
@@ -74,7 +97,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-wrap gap-x-6 gap-y-2 mb-8 text-sm text-[#6E6E73]"
             >
               <span className="flex items-center gap-2">
@@ -90,7 +113,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.55 }}
+              transition={{ duration: 0.6, delay: 0.65 }}
               className="flex flex-wrap gap-3"
             >
               <Link
