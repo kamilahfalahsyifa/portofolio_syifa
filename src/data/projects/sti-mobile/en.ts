@@ -7,7 +7,7 @@ const stiMobileEn: ProjectContent = {
     "STI Mobile is an academic application used to support several university services. My contribution focused on the Internship (Kerja Praktek) Logbook module, which allows students to track guidance activities and monitor their internship progress.",
   shortDescription:
     "Academic mobile application feature for managing internship guidance activities.",
-  year: "2024",
+  year: "2025",
   role: "Mobile Developer",
   techStack: [
     "Flutter",

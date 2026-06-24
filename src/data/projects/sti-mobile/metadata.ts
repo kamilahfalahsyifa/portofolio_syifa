@@ -4,7 +4,7 @@ export const metadata: ProjectMetadata = {
   slug: "sti-mobile",
   image: "/projects/sti-mobile/kp sti.jpg",
   bannerImage: "/projects/sti-mobile/kp sti.jpg",
-  year: "2024",
+  year: "2025",
   role: "Mobile Developer",
   techStack: [
     "Flutter",

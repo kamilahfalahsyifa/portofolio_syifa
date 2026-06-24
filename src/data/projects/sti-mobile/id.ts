@@ -7,7 +7,7 @@ const stiMobileId: ProjectContent = {
     "STI Mobile merupakan aplikasi akademik yang mendukung berbagai layanan kampus. Kontribusi saya berfokus pada modul Logbook Kerja Praktek yang digunakan mahasiswa untuk mencatat aktivitas bimbingan dan memantau progres kerja praktek secara digital.",
   shortDescription:
     "Fitur aplikasi akademik untuk mengelola aktivitas bimbingan kerja praktek.",
-  year: "2024",
+  year: "2025",
   role: "Mobile Developer",
   techStack: [
     "Flutter",
