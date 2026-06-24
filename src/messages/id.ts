@@ -26,24 +26,9 @@ export default {
   },
   about: {
     title: "Tentang Saya",
-    summary:
-      "Saya adalah Pengembang Mobile dan Desainer UI/UX yang passionate membangun produk digital yang bermanfaat, cepat, dan sederhana. Saat ini magang sebagai mobile developer sambil menempuh studi Informatika di Universitas Dian Nuswantoro.",
-    intro:
-      "Saya senang mengubah masalah kompleks menjadi antarmuka yang bersih dan pengalaman mobile yang skalabel. Pekerjaan saya mencakup Flutter, Laravel, dan tools desain seperti Figma — selalu dengan fokus pada pengguna nyata.",
-    cards: {
-      locationLabel: "Lokasi",
-      locationValue: "Semarang, Indonesia",
-      universityLabel: "Universitas",
-      universityValue: "Universitas Dian Nuswantoro",
-      degreeLabel: "Jurusan",
-      degreeValue: "Informatika",
-      focusLabel: "Fokus",
-      focusValue: "Pengembangan Mobile & UI/UX",
-      roleLabel: "Peran Saat Ini",
-      roleValue: "Magang Mobile Developer",
-      orgLabel: "Organisasi",
-      orgValue: "KKO PAUD Kota Semarang",
-    },
+    p1: "Saya adalah Mobile Developer dan Web Developer yang memiliki minat besar dalam membangun produk digital yang bermanfaat, mudah digunakan, dan dapat berkembang sesuai kebutuhan pengguna.",
+    p2: "Saat ini saya sedang menempuh pendidikan Informatika di Universitas Dian Nuswantoro sekaligus menjalani magang sebagai Mobile Developer di Bengkel Koding. Saya memiliki pengalaman mengembangkan aplikasi mobile dan web, termasuk sistem POS, platform fleet management, sistem informasi akademik, serta berbagai proyek UI/UX Design.",
+    p3: "Saya senang mengubah kebutuhan bisnis menjadi solusi digital yang bersih, efisien, dan mudah digunakan. Fokus utama saya adalah menciptakan aplikasi yang memberikan nilai nyata bagi pengguna melalui desain yang baik dan teknologi yang andal.",
   },
   projects: {
     title: "Proyek",

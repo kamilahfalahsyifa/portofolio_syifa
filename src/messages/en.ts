@@ -26,24 +26,9 @@ export default {
   },
   about: {
     title: "About Me",
-    summary:
-      "I am a Mobile Developer and UI/UX Designer passionate about building digital products that are useful, fast, and beautifully simple. Currently interning as a mobile developer while studying Informatics at Universitas Dian Nuswantoro.",
-    intro:
-      "I love turning complex problems into clean interfaces and scalable mobile experiences. My work spans Flutter, Laravel, and design tools like Figma — always with a focus on real users.",
-    cards: {
-      locationLabel: "Location",
-      locationValue: "Semarang, Indonesia",
-      universityLabel: "University",
-      universityValue: "Universitas Dian Nuswantoro",
-      degreeLabel: "Degree",
-      degreeValue: "Informatics",
-      focusLabel: "Focus Area",
-      focusValue: "Mobile Development & UI/UX",
-      roleLabel: "Current Role",
-      roleValue: "Mobile Developer Intern",
-      orgLabel: "Organization",
-      orgValue: "KKO PAUD Kota Semarang",
-    },
+    p1: "I am a Mobile Developer and Web Developer passionate about building digital products that are useful, scalable, and easy to use.",
+    p2: "Currently, I am pursuing a degree in Informatics at Dian Nuswantoro University while working as a Mobile Developer Intern at Bengkel Koding. I have experience developing mobile and web applications, including POS systems, fleet management platforms, academic information systems, and various UI/UX design projects.",
+    p3: "I enjoy turning business requirements into clean, efficient, and user-friendly solutions. My main focus is creating applications that deliver real value to users through thoughtful design and reliable technology.",
   },
   projects: {
     title: "Projects",
@@ -177,7 +162,6 @@ export default {
     email: "Email",
     github: "GitHub",
     linkedin: "LinkedIn",
-    cv: "CV Download",
   },
   projectDetail: {
     backToProjects: "Back to Projects",
